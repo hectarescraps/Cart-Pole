@@ -3,7 +3,7 @@ A cart pole balancing agent powered by Q-Learning. Utilizes Python 3 and Gymnasi
 
 My first attempt at a solution leveraged a static learning rate which did not result in strong performance - 20,000 Episodes: 140 Mean Score. This can be seen in the file [cartpole_static.py.](https://github.com/hectarescraps/Cart-Pole/blob/main/cartpole_static.py)
 
-To increase performance, I transitioned to a variable learning rate which decays as the number of training episodes increases. This led to drastically improved results – 20,000 Episodes: 1,246 Mean Score. Note: over 200 is considered a successful solution. This can be seen in the file [cartpole.py](https://github.com/hectarescraps/Cart-Pole/blob/main/cartpole.py)
+To increase performance, I transitioned to a variable learning rate which decays as the number of training episodes increases. This led to drastically improved results – 20,000 Episodes: 1,246 Mean Score (trained Q Table [here](https://github.com/hectarescraps/Cart-Pole/blob/main/qtable.pickle)). Note: over 200 is considered a successful solution. This can be seen in the file [cartpole.py](https://github.com/hectarescraps/Cart-Pole/blob/main/cartpole.py)
 
 Please feel free to play with / adjust my Q Learning implementation. If you yield a better result, please let me know - I'd love to understand the changes you made and why. Thank you so much for reading!
 
