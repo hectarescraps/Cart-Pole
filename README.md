@@ -7,7 +7,7 @@ To increase performance, I transitioned to a variable learning rate which decays
 
 A few notes on Q Learning and my implementation - 
 
-** High Level Overview of Q Learning **
+**High Level Overview of Q Learning**
 
 Given a state in an environemnt, Q Learning explores different actions which it can take in this state, observes the reward associated with these actions, and updates its knowledge of the perceived quality of these state-action pairs. After sufficient exploration, Q Learning produces a trained model to choose the 'optimal' action in any given state, leading to the greatest possible reward. Optimally is in quotes here as this heavily depends on the specific implementation of Q Learning. 
 
@@ -17,7 +17,11 @@ In the Cart Pole scenario, a given state is represented by: the position of the 
 
 For more information on Q Learning, please see: https://en.wikipedia.org/wiki/Q-learning
 
-Epsilon Greedy: 
+**Epsilon Greedy**
 
-Binning:
+In Q Learning, we want to first explore the environment, and then apply our observed understanding of the environment to arrive at an optimal policy (that is, the action we should take in any given state to maximize our reward). To do this, we must balance our competing desires to explore and exploit (i.e., maximize rewards in) the environment. Epsilon Greedy is a framework to strike such a balance and efficienctly converge to an optimal policy. 
+
+**Binning**
+
+
 
