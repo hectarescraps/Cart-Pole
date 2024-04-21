@@ -17,20 +17,20 @@ env = gym.make("CartPole-v1", max_episode_steps=2000)
 """ discretizing the observation space """
 
 # cart position range 
-cart_pos_space = np.linspace(-2.4, 2.4, 10)
+cart_pos_space = np.linspace(-2.4, 2.4, 8)
 
 # in practice cart velocity can range from (-4, 4)
 cart_velo_space = np.linspace(-4, 4, 1)
 
 # pole angle range 
-pole_ang_space = np.linspace(-.2095, .2095, 8)
+pole_ang_space = np.linspace(-.2095, .2095, 10)
 
 # pole velocity can range from (-4, 4)
 pole_velo_space = np.linspace(-4, 4, 12)
 
 """ model parameters """
 
-training_episodes = 10000
+training_episodes = 20000
 evaluation_episodes = 1000
 visual_testing_episodes = 3
 
@@ -38,7 +38,7 @@ epsilon_decay = -.0001
 max_epsilon = 1
 min_epsilon = 0.1
 
-learning_rate_decay = -.0015
+learning_rate_decay = -.001
 max_learning_rate = 1
 min_learning_rate = 0.1
 
