@@ -11,7 +11,7 @@ A few notes on Q Learning and my implementation -
 
 ## _High Level Overview of Q Learning_
 
-Given a state in an environemnt, Q Learning explores the different actions it can take in this state, the observed reward associated with these actions, and based on these observed rewards, the algorithm updates its knowledge of the perceived quality of these state-action pairs. After sufficient exploration, Q Learning produces a trained model to choose the 'optimal' action in any given state, leading to the greatest possible reward. Optimally is in quotes here as this heavily depends on the specific implementation of Q Learning. 
+Given a state in an environemnt, Q Learning explores the different actions it can take in this state and the observed rewards associated with these actions. Based on these observed rewards, the algorithm updates its knowledge of the perceived quality of these state-action pairs. After sufficient exploration, Q Learning produces a trained model to choose the 'optimal' action in any given state, leading to the greatest possible reward. Optimally is in quotes here as this heavily depends on the specific implementation of Q Learning. 
 
 Q Learning accomplishes this with no prior assumptions or knowledge of the environment. Hence, Q Learning is referred to as a model-free Reinforcement Learning algorithm.
 
