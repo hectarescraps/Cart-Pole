@@ -3,7 +3,9 @@ A cart pole balancing agent powered by Q-Learning. Utilizes Python 3 and Gymnasi
 
 My first attempt at a solution leveraged a static learning rate which did not result in strong performance - 20,000 Episodes: 140 Mean Score. This can be seen in the file [cartpole_static.py.](https://github.com/hectarescraps/Cart-Pole/blob/main/cartpole_static.py)
 
-To increase performance, I transitioned to a variable learning rate which decays as the number of training episodes increases. This led to drastically improved results – 20,000 Episodes: 764 Mean Score. Note: over 200 is considered a successful solution. This can be seen in the file [cartpole.py](https://github.com/hectarescraps/Cart-Pole/blob/main/cartpole.py)
+To increase performance, I transitioned to a variable learning rate which decays as the number of training episodes increases. This led to drastically improved results – 20,000 Episodes: 1,246 Mean Score. Note: over 200 is considered a successful solution. This can be seen in the file [cartpole.py](https://github.com/hectarescraps/Cart-Pole/blob/main/cartpole.py)
+
+Please feel free to play with / adjust my Q Learning implementation. If you yield a better result, please let me know - I'd love to understand the changes you made and why. Thank you so much for reading!
 
 A few notes on Q Learning and my implementation - 
 
@@ -22,6 +24,8 @@ For more information on Q Learning, please see: https://en.wikipedia.org/wiki/Q-
 In Q Learning, we want to first explore the environment, and then apply our observed understanding of the environment to arrive at an optimal policy (that is, the action we should take in any given state to maximize our reward). To do this, we must balance our competing desires to explore and exploit (i.e., maximize rewards in) the environment. Epsilon Greedy is a framework to strike such a balance and efficienctly converge to an optimal policy. 
 
 **Binning**
+
+Q Learning represents a given environment as a finite number of state-action pairs, but the Cart Pole environment has a continuous state space (i.e., an infinite number of states). Thus, to apply Q Learning to the Cart Pole environment, we must first discretize or bin the Cart Pole state space. This is accomplished with the cart_pos_space, cart_velo_space, pole_ang_space and pole_velo_space parameters (at the top of [cartpole.py](https://github.com/hectarescraps/Cart-Pole/blob/main/cartpole.py)) and the Bin function (seen in [helper.py](https://github.com/hectarescraps/Cart-Pole/blob/main/helper.py))
 
 
 
